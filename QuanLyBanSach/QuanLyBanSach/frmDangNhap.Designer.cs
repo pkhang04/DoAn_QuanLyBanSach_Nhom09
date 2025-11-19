@@ -157,11 +157,11 @@
         private Label label1;
         private Label label2;
         private Label label3;
-        private TextBox txtTenDangNhap;
-        private TextBox txtMatKhau;
         private Button btnDangNhap;
         private Button btnHuyBo;
         private PictureBox pictureBox1;
         private CheckBox chkHienMatKhau;
+        public TextBox txtTenDangNhap;
+        public TextBox txtMatKhau;
     }
 }

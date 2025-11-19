@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace QuanLyBanSach.Data
 {
-    public class QLBSDbContext : DbContext
+    public class QLBHDbContext : DbContext
     {
         public DbSet<TheLoai> TheLoai { get; set; }
         public DbSet<NhaXuatBan> NhaXuatBan { get; set; }
@@ -22,7 +22,7 @@ namespace QuanLyBanSach.Data
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer(ConfigurationManager.ConnectionStrings["QLBSConnection"].ConnectionString);
+            optionsBuilder.UseSqlServer(ConfigurationManager.ConnectionStrings["QLBHConnection"].ConnectionString);
         }
     }
 }

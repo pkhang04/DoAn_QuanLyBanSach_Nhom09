@@ -150,7 +150,7 @@
             // cboQuyenHan
             // 
             cboQuyenHan.FormattingEnabled = true;
-            cboQuyenHan.Items.AddRange(new object[] { "Quản trị viên", "Quản lý sách", "Báo cáo thống kê" });
+            cboQuyenHan.Items.AddRange(new object[] { "Quản trị viên", "Quản lý sách" });
             cboQuyenHan.Location = new Point(594, 159);
             cboQuyenHan.Name = "cboQuyenHan";
             cboQuyenHan.Size = new Size(191, 33);
