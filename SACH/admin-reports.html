@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Báo cáo & Thống kê - Admin</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="admin-style.css">
+</head>
+
+<body>
+    <aside class="sidebar">
+        <div class="sidebar-header">
+            <div class="logo">
+                <svg width="40" height="40" viewBox="0 0 40 40" fill="none">
+                    <rect width="40" height="40" rx="8" fill="url(#gradient)" />
+                    <path d="M12 10h16v20H12z" fill="white" opacity="0.9" />
+                    <path d="M20 10v20" stroke="white" stroke-width="2" />
+                    <defs>
+                        <linearGradient id="gradient" x1="0" y1="0" x2="40" y2="40">
+                            <stop offset="0%" stop-color="#667eea" />
+                            <stop offset="100%" stop-color="#764ba2" />
+                        </linearGradient>
+                    </defs>
+                </svg>
+                <div class="logo-text">
+                    <h3>BookStore</h3><span>Admin Panel</span>
+                </div>
+            </div>
+        </div>
+        <nav class="sidebar-nav">            <a href="admin-employees.html" class="nav-item"><span class="icon">👥</span><span>Nhân viên</span></a>
+            <a href="admin-customers.html" class="nav-item"><span class="icon">👤</span><span>Khách hàng</span></a>
+            <a href="admin-books.html" class="nav-item"><span class="icon">📚</span><span>Sách</span></a>
+            <a href="admin-authors.html" class="nav-item"><span class="icon">✍️</span><span>Tác giả</span></a>
+            <a href="admin-publishers.html" class="nav-item"><span class="icon">🏢</span><span>Nhà xuất bản</span></a>
+            <a href="admin-categories.html" class="nav-item"><span class="icon">🏷️</span><span>Thể loại</span></a>
+            <a href="admin-invoices.html" class="nav-item"><span class="icon">🧾</span><span>Hóa đơn</span></a>
+            <a href="admin-reports.html" class="nav-item active"><span class="icon">📈</span><span>Báo cáo</span></a>
+        </nav>
+        <div class="sidebar-footer">
+            <div class="user-info">
+                <div class="avatar">A</div>
+                <div class="user-details">
+                    <h4>Admin</h4><span>Quản trị viên</span>
+                </div>
+            </div>
+            <button class="logout-btn">🚪 Đăng xuất</button>
+        </div>
+    </aside>
+    <main class="main-content">
+        <header class="top-header">
+            <div class="header-left"><button class="menu-toggle">☰</button>
+                <h1>Báo cáo & Thống kê</h1>
+            </div>
+            <div class="header-right">
+                <select class="year-select">
+                    <option>2024</option>
+                    <option>2023</option>
+                </select>
+            </div>
+        </header>
+        <div class="content-area">
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-icon blue">💰</div>
+                    <div class="stat-info">
+                        <h3>125,450,000đ</h3>
+                        <p>Doanh thu tháng này</p>
+                    </div>
+                    <div class="stat-change positive">+15%</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon green">📊</div>
+                    <div class="stat-info">
+                        <h3>1,450,000,000đ</h3>
+                        <p>Doanh thu năm nay</p>
+                    </div>
+                    <div class="stat-change positive">+23%</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon orange">🧾</div>
+                    <div class="stat-info">
+                        <h3>456</h3>
+                        <p>Hóa đơn tháng này</p>
+                    </div>
+                    <div class="stat-change positive">+12%</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon purple">📈</div>
+                    <div class="stat-info">
+                        <h3>275,000đ</h3>
+                        <p>Giá trị TB/Hóa đơn</p>
+                    </div>
+                    <div class="stat-change positive">+8%</div>
+                </div>
+            </div>
+
+            <div class="charts-section">
+                <div class="chart-card">
+                    <div class="card-header">
+                        <h3>Doanh thu theo tháng (2024)</h3>
+                    </div>
+                    <div class="chart-placeholder">
+                        <div class="bar-chart">
+                            <div class="bar" style="height: 60%"><span>T1</span></div>
+                            <div class="bar" style="height: 75%"><span>T2</span></div>
+                            <div class="bar" style="height: 85%"><span>T3</span></div>
+                            <div class="bar" style="height: 70%"><span>T4</span></div>
+                            <div class="bar" style="height: 90%"><span>T5</span></div>
+                            <div class="bar" style="height: 95%"><span>T6</span></div>
+                            <div class="bar" style="height: 80%"><span>T7</span></div>
+                            <div class="bar" style="height: 88%"><span>T8</span></div>
+                            <div class="bar" style="height: 92%"><span>T9</span></div>
+                            <div class="bar" style="height: 78%"><span>T10</span></div>
+                            <div class="bar" style="height: 85%"><span>T11</span></div>
+                            <div class="bar" style="height: 100%"><span>T12</span></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="chart-card">
+                    <div class="card-header">
+                        <h3>Top 10 sách bán chạy</h3>
+                    </div>
+                    <div class="top-books">
+                        <div class="book-item">
+                            <div class="book-rank">1</div>
+                            <div class="book-info">
+                                <h4>Đắc Nhân Tâm</h4>
+                                <p>Dale Carnegie</p>
+                            </div>
+                            <div class="book-sales">234 bán</div>
+                        </div>
+                        <div class="book-item">
+                            <div class="book-rank">2</div>
+                            <div class="book-info">
+                                <h4>Nhà Giả Kim</h4>
+                                <p>Paulo Coelho</p>
+                            </div>
+                            <div class="book-sales">198 bán</div>
+                        </div>
+                        <div class="book-item">
+                            <div class="book-rank">3</div>
+                            <div class="book-info">
+                                <h4>Sapiens</h4>
+                                <p>Yuval Noah Harari</p>
+                            </div>
+                            <div class="book-sales">176 bán</div>
+                        </div>
+                        <div class="book-item">
+                            <div class="book-rank">4</div>
+                            <div class="book-info">
+                                <h4>Tâm Lý Học Tội Phạm</h4>
+                                <p>Diệp Hồng Vũ</p>
+                            </div>
+                            <div class="book-sales">145 bán</div>
+                        </div>
+                        <div class="book-item">
+                            <div class="book-rank">5</div>
+                            <div class="book-info">
+                                <h4>Tuổi Trẻ Đáng Giá Bao Nhiêu</h4>
+                                <p>Rosie Nguyễn</p>
+                            </div>
+                            <div class="book-sales">132 bán</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script src="admin-script.js"></script>
+</body>
+
+</html>

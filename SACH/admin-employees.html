@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quản lý Nhân viên - Admin</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="admin-style.css">
+</head>
+
+<body>
+    <aside class="sidebar">
+        <div class="sidebar-header">
+            <div class="logo">
+                <svg width="40" height="40" viewBox="0 0 40 40" fill="none">
+                    <rect width="40" height="40" rx="8" fill="url(#gradient)" />
+                    <path d="M12 10h16v20H12z" fill="white" opacity="0.9" />
+                    <path d="M20 10v20" stroke="white" stroke-width="2" />
+                    <defs>
+                        <linearGradient id="gradient" x1="0" y1="0" x2="40" y2="40">
+                            <stop offset="0%" stop-color="#667eea" />
+                            <stop offset="100%" stop-color="#764ba2" />
+                        </linearGradient>
+                    </defs>
+                </svg>
+                <div class="logo-text">
+                    <h3>BookStore</h3>
+                    <span>Admin Panel</span>
+                </div>
+            </div>
+        </div>
+        <nav class="sidebar-nav">
+            <a href="admin-employees.html" class="nav-item active"><span class="icon">👥</span><span>Nhân
+                    viên</span></a>
+            <a href="admin-customers.html" class="nav-item"><span class="icon">👤</span><span>Khách hàng</span></a>
+            <a href="admin-books.html" class="nav-item"><span class="icon">📚</span><span>Sách</span></a>
+            <a href="admin-authors.html" class="nav-item"><span class="icon">✍️</span><span>Tác giả</span></a>
+            <a href="admin-publishers.html" class="nav-item"><span class="icon">🏢</span><span>Nhà xuất bản</span></a>
+            <a href="admin-categories.html" class="nav-item"><span class="icon">🏷️</span><span>Thể loại</span></a>
+            <a href="admin-invoices.html" class="nav-item"><span class="icon">🧾</span><span>Hóa đơn</span></a>
+            <a href="admin-reports.html" class="nav-item"><span class="icon">📈</span><span>Báo cáo</span></a>
+        </nav>
+        <div class="sidebar-footer">
+            <div class="user-info">
+                <div class="avatar">A</div>
+                <div class="user-details">
+                    <h4>Admin</h4><span>Quản trị viên</span>
+                </div>
+            </div>
+            <button class="logout-btn">🚪 Đăng xuất</button>
+        </div>
+    </aside>
+
+    <main class="main-content">
+        <header class="top-header">
+            <div class="header-left">
+                <button class="menu-toggle">☰</button>
+                <h1>Quản lý Nhân viên</h1>
+            </div>
+            <div class="header-right">
+                <button class="btn-primary" onclick="alert('Chức năng thêm nhân viên')">+ Thêm nhân viên</button>
+            </div>
+        </header>
+
+        <div class="content-area">
+            <div class="table-card">
+                <div class="table-header">
+                    <div class="search-filter">
+                        <input type="text" placeholder="Tìm kiếm nhân viên...">
+                        <select>
+                            <option>Tất cả vai trò</option>
+                            <option>Quản trị viên</option>
+                            <option>Nhân viên bán hàng</option>
+                            <option>Nhân viên kho</option>
+                        </select>
+                    </div>
+                </div>
+                <table class="data-table">
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>Họ tên</th>
+                            <th>Địa chỉ</th>
+                            <th>Số điện thoại</th>
+                            <th>Vai trò</th>
+                            <th>Hành động</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>
+                                <div class="user-cell">
+                                    <div class="avatar">NV</div>
+                                    <span>Nguyễn Văn A</span>
+                                </div>
+                            </td>
+                            <td>123 Đường ABC, Q.1, TP.HCM</td>
+                            <td>0901234567</td>
+                            <td><span class="badge badge-admin">Quản trị viên</span></td>
+                            <td>
+                                <button class="btn-icon edit" title="Sửa">✏️</button>
+                                <button class="btn-icon delete" title="Xóa">🗑️</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>
+                                <div class="user-cell">
+                                    <div class="avatar">TT</div>
+                                    <span>Trần Thị B</span>
+                                </div>
+                            </td>
+                            <td>456 Đường XYZ, Q.2, TP.HCM</td>
+                            <td>0912345678</td>
+                            <td><span class="badge badge-sales">NV Bán hàng</span></td>
+                            <td>
+                                <button class="btn-icon edit" title="Sửa">✏️</button>
+                                <button class="btn-icon delete" title="Xóa">🗑️</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>
+                                <div class="user-cell">
+                                    <div class="avatar">LV</div>
+                                    <span>Lê Văn C</span>
+                                </div>
+                            </td>
+                            <td>789 Đường DEF, Q.3, TP.HCM</td>
+                            <td>0923456789</td>
+                            <td><span class="badge badge-warehouse">NV Kho</span></td>
+                            <td>
+                                <button class="btn-icon edit" title="Sửa">✏️</button>
+                                <button class="btn-icon delete" title="Xóa">🗑️</button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="table-footer">
+                    <div class="showing-info">Hiển thị 1-3 của 15 nhân viên</div>
+                    <div class="pagination">
+                        <button class="page-btn">«</button>
+                        <button class="page-btn active">1</button>
+                        <button class="page-btn">2</button>
+                        <button class="page-btn">»</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script src="admin-script.js"></script>
+</body>
+
+</html>

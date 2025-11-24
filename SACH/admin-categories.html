@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Quản lý Thể loại - Admin</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="admin-style.css">
+    <style>
+        .categories-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 1.5rem;
+            padding: 2rem 0;
+        }
+
+        .category-item {
+            background: white;
+            padding: 2rem;
+            border-radius: 12px;
+            border: 1px solid var(--border);
+            text-align: center;
+            transition: all 0.3s;
+        }
+
+        .category-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .category-icon-large {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .category-item h3 {
+            font-size: 1.25rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .category-item p {
+            color: var(--gray);
+            margin-bottom: 1rem;
+        }
+
+        .category-actions {
+            display: flex;
+            gap: 0.5rem;
+            justify-content: center;
+        }
+    </style>
+</head>
+
+<body>
+    <aside class="sidebar">
+        <div class="sidebar-header">
+            <div class="logo">
+                <svg width="40" height="40" viewBox="0 0 40 40" fill="none">
+                    <rect width="40" height="40" rx="8" fill="url(#gradient)" />
+                    <path d="M12 10h16v20H12z" fill="white" opacity="0.9" />
+                    <path d="M20 10v20" stroke="white" stroke-width="2" />
+                    <defs>
+                        <linearGradient id="gradient" x1="0" y1="0" x2="40" y2="40">
+                            <stop offset="0%" stop-color="#667eea" />
+                            <stop offset="100%" stop-color="#764ba2" />
+                        </linearGradient>
+                    </defs>
+                </svg>
+                <div class="logo-text">
+                    <h3>BookStore</h3><span>Admin Panel</span>
+                </div>
+            </div>
+        </div>
+        <nav class="sidebar-nav">            <a href="admin-employees.html" class="nav-item"><span class="icon">👥</span><span>Nhân viên</span></a>
+            <a href="admin-customers.html" class="nav-item"><span class="icon">👤</span><span>Khách hàng</span></a>
+            <a href="admin-books.html" class="nav-item"><span class="icon">📚</span><span>Sách</span></a>
+            <a href="admin-authors.html" class="nav-item"><span class="icon">✍️</span><span>Tác giả</span></a>
+            <a href="admin-publishers.html" class="nav-item"><span class="icon">🏢</span><span>Nhà xuất bản</span></a>
+            <a href="admin-categories.html" class="nav-item active"><span class="icon">🏷️</span><span>Thể
+                    loại</span></a>
+            <a href="admin-invoices.html" class="nav-item"><span class="icon">🧾</span><span>Hóa đơn</span></a>
+            <a href="admin-reports.html" class="nav-item"><span class="icon">📈</span><span>Báo cáo</span></a>
+        </nav>
+        <div class="sidebar-footer">
+            <div class="user-info">
+                <div class="avatar">A</div>
+                <div class="user-details">
+                    <h4>Admin</h4><span>Quản trị viên</span>
+                </div>
+            </div>
+            <button class="logout-btn">🚪 Đăng xuất</button>
+        </div>
+    </aside>
+    <main class="main-content">
+        <header class="top-header">
+            <div class="header-left"><button class="menu-toggle">☰</button>
+                <h1>Quản lý Thể loại</h1>
+            </div>
+            <div class="header-right"><button class="btn-primary" onclick="alert('Thêm thể loại')">+ Thêm thể
+                    loại</button></div>
+        </header>
+        <div class="content-area">
+            <div class="categories-grid">
+                <div class="category-item">
+                    <div class="category-icon-large">📚</div>
+                    <h3>Văn học</h3>
+                    <p>450 sách</p>
+                    <div class="category-actions">
+                        <button class="btn-icon edit">✏️</button>
+                        <button class="btn-icon delete">🗑️</button>
+                    </div>
+                </div>
+                <div class="category-item">
+                    <div class="category-icon-large">💼</div>
+                    <h3>Kinh tế</h3>
+                    <p>320 sách</p>
+                    <div class="category-actions">
+                        <button class="btn-icon edit">✏️</button>
+                        <button class="btn-icon delete">🗑️</button>
+                    </div>
+                </div>
+                <div class="category-item">
+                    <div class="category-icon-large">🔬</div>
+                    <h3>Khoa học</h3>
+                    <p>280 sách</p>
+                    <div class="category-actions">
+                        <button class="btn-icon edit">✏️</button>
+                        <button class="btn-icon delete">🗑️</button>
+                    </div>
+                </div>
+                <div class="category-item">
+                    <div class="category-icon-large">🎨</div>
+                    <h3>Nghệ thuật</h3>
+                    <p>150 sách</p>
+                    <div class="category-actions">
+                        <button class="btn-icon edit">✏️</button>
+                        <button class="btn-icon delete">🗑️</button>
+                    </div>
+                </div>
+                <div class="category-item">
+                    <div class="category-icon-large">👶</div>
+                    <h3>Thiếu nhi</h3>
+                    <p>520 sách</p>
+                    <div class="category-actions">
+                        <button class="btn-icon edit">✏️</button>
+                        <button class="btn-icon delete">🗑️</button>
+                    </div>
+                </div>
+                <div class="category-item">
+                    <div class="category-icon-large">💻</div>
+                    <h3>Công nghệ</h3>
+                    <p>190 sách</p>
+                    <div class="category-actions">
+                        <button class="btn-icon edit">✏️</button>
+                        <button class="btn-icon delete">🗑️</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script src="admin-script.js"></script>
+</body>
+
+</html>

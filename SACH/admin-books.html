@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quản lý Sách - Admin Dashboard</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="admin-style.css">
+</head>
+
+<body>
+    <!-- Sidebar -->
+    <aside class="sidebar">
+        <div class="sidebar-header">
+            <div class="logo">
+                <svg width="40" height="40" viewBox="0 0 40 40" fill="none">
+                    <rect width="40" height="40" rx="8" fill="url(#gradient)" />
+                    <path d="M12 10h16v20H12z" fill="white" opacity="0.9" />
+                    <path d="M20 10v20" stroke="white" stroke-width="2" />
+                    <defs>
+                        <linearGradient id="gradient" x1="0" y1="0" x2="40" y2="40">
+                            <stop offset="0%" stop-color="#667eea" />
+                            <stop offset="100%" stop-color="#764ba2" />
+                        </linearGradient>
+                    </defs>
+                </svg>
+                <div class="logo-text">
+                    <h3>BookStore</h3>
+                    <span>Admin Panel</span>
+                </div>
+            </div>
+        </div>
+
+        <nav class="sidebar-nav">            <a href="admin-employees.html" class="nav-item">
+                <span class="icon">👥</span>
+                <span>Nhân viên</span>
+            </a>
+            <a href="admin-customers.html" class="nav-item">
+                <span class="icon">👤</span>
+                <span>Khách hàng</span>
+            </a>
+            <a href="admin-books.html" class="nav-item active">
+                <span class="icon">📚</span>
+                <span>Sách</span>
+            </a>
+            <a href="admin-authors.html" class="nav-item">
+                <span class="icon">✍️</span>
+                <span>Tác giả</span>
+            </a>
+            <a href="admin-publishers.html" class="nav-item">
+                <span class="icon">🏢</span>
+                <span>Nhà xuất bản</span>
+            </a>
+            <a href="admin-categories.html" class="nav-item">
+                <span class="icon">🏷️</span>
+                <span>Thể loại</span>
+            </a>
+            <a href="admin-invoices.html" class="nav-item">
+                <span class="icon">🧾</span>
+                <span>Hóa đơn</span>
+            </a>
+            <a href="admin-reports.html" class="nav-item">
+                <span class="icon">📈</span>
+                <span>Báo cáo</span>
+            </a>
+        </nav>
+
+        <div class="sidebar-footer">
+            <div class="user-info">
+                <div class="avatar">A</div>
+                <div class="user-details">
+                    <h4>Admin</h4>
+                    <span>Quản trị viên</span>
+                </div>
+            </div>
+            <button class="logout-btn">🚪 Đăng xuất</button>
+        </div>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <header class="top-header">
+            <div class="header-left">
+                <button class="menu-toggle">☰</button>
+                <h1>Quản lý Sách</h1>
+            </div>
+            <div class="header-right">
+                <button class="btn-primary" onclick="alert('Chức năng thêm sách')">+ Thêm sách</button>
+            </div>
+        </header>
+
+        <div class="content-area">
+            <div class="table-card">
+                <div class="table-header">
+                    <div class="search-filter">
+                        <input type="text" placeholder="Tìm kiếm sách...">
+                        <select>
+                            <option>Tất cả thể loại</option>
+                            <option>Văn học</option>
+                            <option>Kinh tế</option>
+                            <option>Khoa học</option>
+                            <option>Kỹ năng sống</option>
+                        </select>
+                    </div>
+                </div>
+                <table class="data-table">
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>Ảnh bìa</th>
+                            <th>Tên sách</th>
+                            <th>Tác giả</th>
+                            <th>Thể loại</th>
+                            <th>NXB</th>
+                            <th>Giá</th>
+                            <th>Tồn kho</th>
+                            <th>Hành động</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>
+                                <img src="images/books/dac-nhan-tam.jpg" alt="Đắc Nhân Tâm" class="book-cover"
+                                    onerror="this.src='https://via.placeholder.com/60x80/667eea/ffffff?text=Book'">
+                            </td>
+                            <td>
+                                <div class="book-title-cell">
+                                    <strong>Đắc Nhân Tâm</strong>
+                                </div>
+                            </td>
+                            <td>Dale Carnegie</td>
+                            <td><span class="badge badge-category">Kỹ năng sống</span></td>
+                            <td>NXB Trẻ</td>
+                            <td><strong>89,000đ</strong></td>
+                            <td><span class="stock-badge in-stock">250</span></td>
+                            <td>
+                                <button class="btn-icon edit" title="Sửa">✏️</button>
+                                <button class="btn-icon delete" title="Xóa">🗑️</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>
+                                <img src="images/books/nha-gia-kim.jpg" alt="Nhà Giả Kim" class="book-cover"
+                                    onerror="this.src='https://via.placeholder.com/60x80/764ba2/ffffff?text=Book'">
+                            </td>
+                            <td>
+                                <div class="book-title-cell">
+                                    <strong>Nhà Giả Kim</strong>
+                                </div>
+                            </td>
+                            <td>Paulo Coelho</td>
+                            <td><span class="badge badge-category">Văn học</span></td>
+                            <td>NXB Hội Nhà Văn</td>
+                            <td><strong>79,000đ</strong></td>
+                            <td><span class="stock-badge in-stock">180</span></td>
+                            <td>
+                                <button class="btn-icon edit" title="Sửa">✏️</button>
+                                <button class="btn-icon delete" title="Xóa">🗑️</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>
+                                <img src="images/books/sapiens.jpg" alt="Sapiens" class="book-cover"
+                                    onerror="this.src='https://via.placeholder.com/60x80/f093fb/ffffff?text=Book'">
+                            </td>
+                            <td>
+                                <div class="book-title-cell">
+                                    <strong>Sapiens: Lược Sử Loài Người</strong>
+                                </div>
+                            </td>
+                            <td>Yuval Noah Harari</td>
+                            <td><span class="badge badge-category">Khoa học</span></td>
+                            <td>NXB Thế Giới</td>
+                            <td><strong>199,000đ</strong></td>
+                            <td><span class="stock-badge low-stock">45</span></td>
+                            <td>
+                                <button class="btn-icon edit" title="Sửa">✏️</button>
+                                <button class="btn-icon delete" title="Xóa">🗑️</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td>
+                                <img src="images/books/tam-ly-hoc-toi-pham.jpg" alt="Tâm Lý Học Tội Phạm"
+                                    class="book-cover"
+                                    onerror="this.src='https://via.placeholder.com/60x80/4facfe/ffffff?text=Book'">
+                            </td>
+                            <td>
+                                <div class="book-title-cell">
+                                    <strong>Tâm Lý Học Tội Phạm</strong>
+                                </div>
+                            </td>
+                            <td>Diệp Hồng Vũ</td>
+                            <td><span class="badge badge-category">Tâm lý</span></td>
+                            <td>NXB Thanh Niên</td>
+                            <td><strong>129,000đ</strong></td>
+                            <td><span class="stock-badge in-stock">120</span></td>
+                            <td>
+                                <button class="btn-icon edit" title="Sửa">✏️</button>
+                                <button class="btn-icon delete" title="Xóa">🗑️</button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="table-footer">
+                    <div class="showing-info">Hiển thị 1-4 của 2,543 sách</div>
+                    <div class="pagination">
+                        <button class="page-btn">«</button>
+                        <button class="page-btn active">1</button>
+                        <button class="page-btn">2</button>
+                        <button class="page-btn">3</button>
+                        <button class="page-btn">»</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="admin-script.js"></script>
+</body>
+
+</html>
